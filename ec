@@ -10,4 +10,4 @@ unset https_proxy
 
 # See https://wiki.archlinux.org/index.php/fcitx#Emacs and
 # https://fcitx-im.org/wiki/FAQ#Emacs
-LC_CTYPE=zh_CN.UTF-8 exec emacsclient -a "" -c "$@"
+LC_CTYPE=zh_CN.UTF-8 proxychains emacsclient -a "" -c "$@"
