@@ -15,6 +15,5 @@ fi
 FILE_TO_ENCRYPT=$1
 TARGET_DIR=$2
 ENCRYPTED_FILE_NAME=$(basename $FILE_TO_ENCRYPT).tar.gz.gpg
-RECIPIENT=***REMOVED***
 
-tar -c $FILE_TO_ENCRYPT | gzip | gpg -o $TARGET_DIR/$ENCRYPTED_FILE_NAME --recipient $RECIPIENT -e -c
+tar -c $FILE_TO_ENCRYPT | gzip | gpg -o $TARGET_DIR/$ENCRYPTED_FILE_NAME -e -c
